@@ -18,7 +18,7 @@ const DialogoDisclaimer = props => {
           La información que está por introducir puede ser información confidencial o sensible. 
         </p>
         <p>
-          Elanco en ningún caso guardará la información que Ud. voluntariamente ingresa en esta aplicación. 
+        MSD Salud Animal en ningún caso guardará la información que Ud. voluntariamente ingresa en esta aplicación. 
         </p>
       </div> 
       <button

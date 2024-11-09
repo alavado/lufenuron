@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
-import { redondearYAString, agruparProductosVertidos } from '../../../helpers/helpers';
+import { redondearYAString, agruparProductosVertidos, agruparProductosOrales } from '../../../helpers/helpers';
 import { JORNADAS_POR_BAÑO_POR_JAULA } from '../../../helpers/constantes';
 import { useSelector } from 'react-redux'
 import './../Anexos/Anexos.css'
@@ -91,7 +91,39 @@ const ImpactosLaborales = props => {
       <br/>
       Fuente: CERES BCA con base en datos de parámetros productivos 2015 – 2018 y Reporte Aquabench SM101.1018.
       </div>
-      <h3>3.2 Cantidad de productos vertidos al mar por ciclo</h3>
+      <h3>3.2 Cantidad de productos orales usados en mar por ciclo </h3>
+      <table className="tabla-reporte">
+        <thead>
+          <tr>
+            <th style={{ width: 280 }}>Producto</th>
+            <th>Estrategia 1</th>
+            <th>Estrategia 2</th>
+            <th>Diferencia</th>
+          </tr>
+        </thead>
+        <tbody>
+          {agruparProductosOrales(medicamentos, obtenerTratamientosEnCiclos(tratamientos, curvaTradicional, curvaImvixa), volumenJaula, numeroJaulas, numeroSmolts, curvas).map((v, i) => {
+            let icono = ''
+            const diferencia = v.tradicional - v.imvixa
+            if (diferencia > 0) {
+              icono = <FontAwesomeIcon icon={faArrowDown} style={{ marginRight: 4, color: 'green' }} />
+            }
+            else if (diferencia < 0) {
+              icono = <FontAwesomeIcon icon={faArrowUp} style={{ marginRight: 4, color: 'red' }} />
+            }
+            return (<tr key={`vertidos-${i}`} className="fila-vertidos">
+              <td>{v.principioActivo}</td>
+              <td>{redondearYAString(v.tradicional / 1000)} Kg/centro</td>
+              <td>{redondearYAString(v.imvixa / 1000)} Kg/centro</td>
+              <td>{icono} {redondearYAString(Math.abs(diferencia / 1000))} Kg</td>
+            </tr>)
+          })}
+        </tbody>
+      </table>
+      <div className="nota">
+      Fuente: Cálculo basado en dosis de principio activo por tratamientos confirmados por usuario.
+      </div>
+      <h3>3.3 Cantidad de productos vertidos al mar por ciclo</h3>
       <table className="tabla-reporte">
         <thead>
           <tr>
@@ -123,7 +155,7 @@ const ImpactosLaborales = props => {
       <div className="nota">
       Fuente: Cálculo basado en dosis de principio activo por tratamientos confirmados por usuario.
       </div>
-      <h3>3.3 Índice de uso de antiparasitario por producto* (g de principio activo por tonelada)</h3>
+      <h3>3.4 Índice de uso de antiparasitario por producto* (g de principio activo por tonelada)</h3>
       <table className="tabla-reporte">
         <thead>
           <tr>

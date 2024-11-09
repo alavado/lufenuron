@@ -138,7 +138,7 @@ const Reporte = ({ state, fijarValorDolar }) => {
               <label for="peso">Peso chileno (1 USD = {valorDolar.valor} CLP)</label>
             </div>
           </div>
-          {/* <button onClick={imprimirPDF}>Imprimir PDF</button> */}
+          <button onClick={imprimirPDF}>Imprimir PDF</button>
         </div>
       </div>
       <div id="reporte">
@@ -179,10 +179,10 @@ const Reporte = ({ state, fijarValorDolar }) => {
           biomasaTradicional={biomasaTradicional}
           biomasaImvixa={biomasaImvixa}
         />
-        <ImpactoCertificacion
+        {/* <ImpactoCertificacion
           numeroBañosTradicional={numeroBañosTradicional}
           numeroBañosImvixa={numeroBañosImvixa}
-        />
+        /> */}
         <ImpactoRegulacion
           mortalidadTotalTradicional={mortalidadTotalTradicional}
           mortalidadTotalImvixa={mortalidadTotalImvixa}
@@ -202,10 +202,10 @@ const Reporte = ({ state, fijarValorDolar }) => {
       </div>
       <div className="Reporte__texto_copyright">
           <p>
-            Imvixa, Elanco y el logo de la barra diagonal son marcas registradas de Elanco o sus afiliadas.
+          Copyright © 2024 Merck & Co., Inc., Rahway, NJ, USA and its affiliates. All rights reserved.
           </p>
           <p>
-            ©2020 Elanco PM-CL-20-0056
+            ©2020 MSD Salud Animal PM-CL-20-0056
           </p>
       </div> 
     </>

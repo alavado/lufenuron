@@ -6,7 +6,7 @@
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(44, 44, 44, 0.90);
+  background-color: rgba(88, 88, 88, 0.9);
 }
 
 .DisclaimerInicial__formulario{
@@ -19,7 +19,7 @@
 }
 
 .DisclaimerInicial__mensaje {
-  background-color: #5B9BD5;
+  background-color: var(--color-a);
   color: white;
   padding: 1em;
   text-align: center;
@@ -36,14 +36,14 @@
 }
 
 .DisclaimerInicial__botones_continuar {
-  background-color: #0078BF;
-  font-size: 1.2em;
+  background-color: var(--color-a);
+  font-size: large;
   transition: filter .1s ease;
 }
 
 .DisclaimerInicial__botones_cancelar {
-  background-color: #C00000;
-  font-size: 1.2em;
+  background-color: #7f0000;
+  font-size: large;
   transition: filter .1s ease;
 }
 

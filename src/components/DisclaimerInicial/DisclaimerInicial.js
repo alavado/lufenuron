@@ -16,10 +16,10 @@ const DisclaimerInicial = props => {
       <div className="DisclaimerInicial__formulario">
         <div className="DisclaimerInicial__mensaje">
           <p>
-            Al iniciar sesión, confirmo que entiendo que este no es un dispositivo médico y que sus resultados en ningún caso reemplazan la prescripción médica veterinaria. 
+            Al iniciar sesión, confirmo que entiendo que éste no es un dispositivo médico y que sus resultados en ningún caso reemplazan la prescripción médica veterinaria. 
           </p>
           <p>
-            Esta herramienta de simulación utiliza los datos que usted voluntariamente decida incorporar. Elanco no archiva ni guarda información alguna que haya sido incluida por usted o respecto de las simulaciones que usted desee realizar junto al representante de ventas o técnico de Elanco.
+            Esta herramienta de simulación utiliza los datos que usted voluntariamente decida incorporar. MSD Salud Animal no archiva ni guarda información alguna que haya sido incluida por usted o respecto de las simulaciones que usted desee realizar junto al representante de ventas o técnico de MSD Salud Animal.
           </p>
         </div>
         <div className="DisclaimerInicial__botones">

@@ -8,16 +8,18 @@ import Reporte from '../Reporte';
 
 const App = ()  => {
   return (
-    <Provider store={store}>
-      <HashRouter>
-        <Switch>
-          <Route path="/reporte" exact component={Reporte} />
-          <div id="fondo">
-            <Contenedor />
-          </div>
-        </Switch>
-      </HashRouter>
-    </Provider>
+    <div className="App">
+      <Provider store={store}>
+        <HashRouter>
+          <Switch>
+            <Route path="/reporte" exact component={Reporte} />
+            <div id="fondo">
+              <Contenedor />
+            </div>
+          </Switch>
+        </HashRouter>
+      </Provider>
+    </div>
   );
 }
 

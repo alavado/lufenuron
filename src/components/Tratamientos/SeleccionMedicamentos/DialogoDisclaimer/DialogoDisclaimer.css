@@ -15,7 +15,7 @@
 }
 
 .DialogoDisclaimer__mensaje {
-  background-color: hsl(202, 100%, 43%);
+  background-color: var(--color-a);
   color: white;
   padding: 2em;
   text-align: center;

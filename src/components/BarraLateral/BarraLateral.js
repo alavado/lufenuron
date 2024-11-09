@@ -3,7 +3,7 @@ import { NavLink as Link } from 'react-router-dom'
 import './BarraLateral.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFish, faWarehouse, faSyringe, faChartBar } from '@fortawesome/free-solid-svg-icons'
-import logoElanco from '../../assets/elanco.svg'
+import logoElanco from '../../assets/MDS.svg'
 import logoCeres from '../../assets/logo_ceres.png'
 import { version } from '../../../package.json'
 
@@ -44,7 +44,7 @@ const BarraLateral = () => {
       </div>
       <div id="contenedor-logo">
         <Link to="/">
-          <img src={logoElanco} alt="logo elanco" id="logo-elanco" onDragEnter={() => false} />
+          <img src={logoElanco} alt="logo MSD" id="logo-elanco" onDragEnter={() => false} />
         </Link>
         <div id="version">
           Desarrollado por CERES BCA<br/>

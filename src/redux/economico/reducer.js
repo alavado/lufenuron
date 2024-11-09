@@ -1,19 +1,19 @@
 import economicoActions from './actions'
 
 const initialState = {
-  costoAlimento : 1.4,
+  costoAlimento : 1.8,
   estructuraCostos: {
-    alimento: 63,
-    smolts: 13.6,
-    personal: 1,
-    operaciones: 15,
-    depreciación: 1.4,
-    salud: 4.0,
+    alimento: 55,
+    smolts: 16.6,
+    personal: 2,
+    operaciones: 18,
+    depreciación: 2.4,
+    salud: 5.0,
     seguros: 2,
     otros: 0
   },
   valorKiloProducido : 7.6,
-  costoSmolt: 2.15,
+  costoSmolt: 2.5,
   valorDolar: {
     valor: 789,
     fecha: '2019-11-25'

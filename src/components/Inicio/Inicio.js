@@ -5,7 +5,7 @@ import './Inicio.css'
 const Inicio = () => {
   return (
     <div className="contenido">
-      <div className="barra-superior-contenido">
+      <div className="barra-superior-contenido-principal">
         <div className="titulo-contenido">
           Acerca de
         </div>

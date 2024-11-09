@@ -354,6 +354,25 @@ export const calcularProductosVertidosBaños = (
 // const costoBaño = (costoProducto + Number(medicamento.costoOperacional)) * Number(numeroDeJaulas)
 // return suma + costoBaño
 
+export const calcularProductosOrales = (
+  medicamentos,
+  tratamientos,
+  volumenJaula,
+  numeroDeJaulas,
+  numeroDeSmoltsInicial,
+  curvas
+) => {
+  const aplicaciones = Object.keys(tratamientos).map(
+    (semana) => tratamientos[semana].idMedicamento
+  );
+  return calcularProductosVertidosOrales(
+    medicamentos,
+    tratamientos,
+    numeroDeSmoltsInicial,
+    curvas
+  );
+};
+
 export const calcularProductosVertidos = (
   medicamentos,
   tratamientos,
@@ -378,6 +397,62 @@ export const calcularProductosVertidos = (
       numeroDeJaulas
     )
   );
+};
+
+export const agruparProductosOrales = (
+  medicamentos,
+  tratamientos,
+  volumenJaula,
+  numeroDeJaulas,
+  numeroDeSmoltsInicial,
+  curvas
+) => {
+  const principiosActivos = [
+    ...new Set(
+      medicamentos
+        .filter((m) => m.formaFarmaceutica === FARMACO_APLICACION_ORAL)
+        .map((m) => m.principioActivo)
+    ),
+  ];
+  const estrategias = Object.keys(tratamientos);
+  const productosVertidos = {
+    tradicional: calcularProductosOrales(
+      medicamentos,
+      tratamientos.tradicional,
+      volumenJaula,
+      numeroDeJaulas,
+      numeroDeSmoltsInicial,
+      curvas.tradicional
+    ),
+    imvixa: calcularProductosOrales(
+      medicamentos,
+      tratamientos.imvixa,
+      volumenJaula,
+      numeroDeJaulas,
+      numeroDeSmoltsInicial,
+      curvas.imvixa
+    ),
+  };
+  return principiosActivos
+    .map((principioActivo) => {
+      const medicamento = medicamentos.find(
+        (m) => m.principioActivo === principioActivo
+      );
+      return {
+        principioActivo,
+        unidad: medicamento.unidadDosis.slice(0, 2),
+        ...estrategias.reduce((obj, estrategia) => {
+          return {
+            ...obj,
+            [estrategia]: productosVertidos[estrategia]
+              .filter((m) => m.principioActivo === principioActivo)
+              .reduce((p, v) => p + v.cantidad, 0),
+          };
+        }, {}),
+      };
+    })
+    .filter((p) => estrategias.reduce((v, e) => v || p[e] > 0, false))
+    .sort((p1, p2) => (p1.principioActivo > p2.principioActivo ? 1 : -1));
 };
 
 // agrupa los productos utilizados y filtra aquellos vertidos (FARMACO_APLICACION_BAÑO)

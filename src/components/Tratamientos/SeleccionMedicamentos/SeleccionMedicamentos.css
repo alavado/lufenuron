@@ -24,7 +24,7 @@
 
 .tabla-medicamentos th {
   font-weight: bold;
-  background-color: hsl(202, 100%, 43%);
+  background-color: var(--color-a);
   color: white;
 }
 
@@ -50,7 +50,7 @@
 
 .contenedor-boton-agregar-medicamento > svg {
   margin-left: 8px;
-  color: hsl(202, 100%, 43%);
+  color: var(--color-a);
   cursor: pointer;
 }
 
@@ -157,7 +157,7 @@
 }
 
 #contenedor-ajustes .titulo-tabla-medicamentos svg {
-  color: hsl(202, 100%, 43%);
+  color:  var(--color-a);
 }
 
 #contenedor-ajustes .titulo-tabla-medicamentos .contenedor-agregar-medicamento {

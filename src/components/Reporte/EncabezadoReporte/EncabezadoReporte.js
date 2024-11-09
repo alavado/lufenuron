@@ -1,5 +1,5 @@
 import React from 'react';
-import logoElanco from '../../../assets/elanco.svg'
+import logoElanco from '../../../assets/MDS.svg'
 import { useSelector } from 'react-redux'
 import { obtenerFechaActualBonita } from '../../../helpers/helpers';
 import './EncabezadoReporte.css'
