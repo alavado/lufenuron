@@ -50,22 +50,22 @@ div[id^="regulacion"] {
 }
 
 #regulacion-imvixa {
-  background-color: rgb(233, 151, 0);
+  background-color: var(--color-h2);
 }
 
 #regulacion-imvixa > p {
   margin-top: 0px;
   height: 10px;
-  background-color: #EF7B10;
+  background-color: var(--color-h2);
 }
 
 #regulacion-tradicional {
-  background-color: rgba(128, 128, 128, 1);
+  background-color: var(--color-e2) ;
 }
 
 #regulacion-tradicional > p {
   margin-top: -52px;
-  background-color: #5F7D8B;
+  background-color: var(--color-e2) ;
 }
 
 div[id^="regulacion"] > p {
@@ -92,7 +92,7 @@ div[id^="regulacion"] > p > span {
   left: 45px;
   border-style: solid;
   border-width: 0 30px 20px 0;
-  border-color: transparent #EF7B10 transparent transparent;
+  border-color: transparent var(--color-h2) transparent transparent;
 }
 
 #regulacion-tradicional > p > span {
@@ -103,6 +103,6 @@ div[id^="regulacion"] > p > span {
   left: 45px;
   border-style: solid;
   border-width: 0 0 20px 30px;
-  border-color: transparent transparent #5F7D8B transparent;
+  border-color: transparent transparent var(--color-e2) transparent;
 
 }

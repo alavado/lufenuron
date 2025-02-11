@@ -1,5 +1,5 @@
 import React from 'react';
-import ImagenBienvenida from '../../assets/Fondo simulador IMVIXA_oct22.jpg'
+import ImagenBienvenida from '../../assets/NUEVA PORTADA VISION MSD.jpg'
 import './Inicio.css'
 
 const Inicio = () => {

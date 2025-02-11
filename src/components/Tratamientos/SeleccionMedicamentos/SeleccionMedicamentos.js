@@ -29,6 +29,9 @@ const SeleccionMedicamentos = ({medicamentos, activarMedicamento, marcarMedicame
     })
   }
 
+  const medicamentosBaños = medicamentos.filter(m => m.formaFarmaceutica === FARMACO_APLICACION_BAÑO).sort((m1, m2) => m1.nombre > m2.nombre ? 1 : -1);
+  const medicamentosOral = medicamentos.filter(m => m.formaFarmaceutica === FARMACO_APLICACION_ORAL).sort((m1, m2) => m1.id > m2.id ? 1 : -1);
+
   const [mostrarDialogoDisclaimer, setMostrarDialogoDisclaimer] = useState(true)
 
   return (
@@ -84,7 +87,7 @@ const SeleccionMedicamentos = ({medicamentos, activarMedicamento, marcarMedicame
                   </tr>
                 </thead>
                 <tbody>
-                  {medicamentos.filter(m => m.formaFarmaceutica === formaFarmaceutica).sort((m1, m2) => m1.nombre > m2.nombre ? 1 : -1).map((m, i) => (
+                  {(formaFarmaceutica === FARMACO_APLICACION_BAÑO ? medicamentosBaños : medicamentosOral).map((m, i) => (
                     <FilaMedicamento
                       key={`tabla-medicamentos-${m.id}`}
                       id={m.id}

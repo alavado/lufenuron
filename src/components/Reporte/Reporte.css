@@ -16,7 +16,7 @@
 
 #datos-empresa-reporte {
   margin: 40px;
-  border-bottom: 2px solid #2A2E57;
+  border-bottom: 2px solid var(--color-a);
   padding-bottom: 10px;
 }
 
@@ -58,9 +58,9 @@
   margin-top: 60px;
   font-size: 2em;
   margin-bottom: 36px;
-  color: #2A2E57;
+  color: var(--color-a);
   padding: 4px 16px;
-  border-left: 8px solid #EF7B10;
+  border-left: 8px solid var(--color-a);
 }
 
 #reporte h2 {
@@ -151,14 +151,14 @@
   border-top: 1px solid lightblue;
   border-bottom: 1px solid lightblue;
   font-size: .9em;
-  color: #2A2E57;
+  color: var(--color-a);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .lengueta {
-  background-color: #9CC7CE;
+  background-color: var(--color-e20);
   height: 26px;
   margin-top: -8px;
 }
@@ -168,7 +168,7 @@
 }
 
 .lengueta.imvixa {
-  background-color: rgb(255, 177, 104);
+  background-color: var(--color-h22);
 }
 
 #comparacion > div:nth-child(1) > div > div.lengueta {
@@ -196,12 +196,12 @@
 
 #comparacion > div:nth-child(1) > div:last-child > div.lengueta {
   height: 42px;
-  background: #417B85;
+  background: var(--color-e2);
 }
 
 #comparacion > div:nth-child(3) > div:last-child > div.lengueta {
   height: 42px;
-  background-color: #EF7B10;
+  background-color: var(--color-h2);
 }
 
 #comparacion > div:nth-child(1) > div:last-child > div.valor,
@@ -248,6 +248,10 @@
 }
 
 #anexos {
+  page-break-before: always;
+}
+
+#impactoRegulacion {
   page-break-before: always;
 }
 
@@ -320,7 +324,7 @@
   padding: 8px 16px;
   font-weight: bold;
   font-size: 1.2em;
-  background-color: #EF7B10;
+  background-color: var(--color-h2);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   color: white;

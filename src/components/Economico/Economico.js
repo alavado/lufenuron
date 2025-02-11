@@ -124,7 +124,7 @@ const Economico = props => {
                 datasets: [
                   {
                     data: [costoProporcionalSmolt, otrosCostos, costoProporcionalAlimento],        
-                    backgroundColor: ['#69b8f7', '#706f6f', '#5350e4' ],
+                    backgroundColor: ['#69b8f7', '#688ce8', '#6eceb2' ],
                   }
                 ]
               }}

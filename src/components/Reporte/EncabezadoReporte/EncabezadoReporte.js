@@ -9,7 +9,7 @@ const EncabezadoReporte = () => {
   const centro = useSelector(state => state.centro)
   const { nombreCentro, titular } = centro
   const codigoCentro = centro.barrios[centro.indiceBarrioSeleccionado].centros[centro.indiceCentroSeleccionado].codigo
-
+  const centroLabelDefault = codigoCentro ? codigoCentro : "No seleccionado"
   return (
     <>
       <div id="logos-reporte">
@@ -25,7 +25,7 @@ const EncabezadoReporte = () => {
             </div>
           </li>
           <li>Empresa: <span>{titular}</span></li>
-          <li>Centro: <span>{(nombreCentro !== '' ? `${nombreCentro} (código: ${codigoCentro})` : codigoCentro)}</span></li>
+          <li>Centro: <span>{(nombreCentro !== '' ? `${nombreCentro} (código: ${codigoCentro})` : centroLabelDefault)}</span></li>
           <li>Fecha: <span>{obtenerFechaActualBonita()}</span></li>
         </ul>
       </div>

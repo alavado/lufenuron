@@ -210,7 +210,7 @@ const Produccion = props => {
                   {
                     label: 'Peso final',
                     data: curvaCrecimiento.filter((peso, i) => i > 0 && i % 30 === 0 || i === curvaCrecimiento.length - 1),
-                    backgroundColor: '#C77967',
+                    backgroundColor: '#fff063',
                     type: 'line',
                     yAxisID: 'EjeYPesoPromedio',
                     fill: false
@@ -218,13 +218,13 @@ const Produccion = props => {
                   {
                     label: 'Biomasa final mes',
                     data: curvaBiomasa.slice(0, -1),
-                    backgroundColor: '#67C7A4',
+                    backgroundColor: '#6eceb2',
                     yAxisID: 'EjeYBiomasa'
                   },
                   {
                     label: 'Biomasa cosechada',
                     data: [...Array.from(Array(curvaBiomasa.length - 1)).map(x => 0), ...curvaBiomasa.slice(-1)],
-                    backgroundColor: '#2BAE66'
+                    backgroundColor: '#29c472'
                   }
                 ]
               }}

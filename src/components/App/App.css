@@ -110,7 +110,7 @@ a {
 .titulo-contenido-secundario {
   height: 50px;
   width: 100%;
-  background-color: var(--color-a-l);
+  background-color: var(--color-a);
   display: flex;
   align-items: center;
   color: white;
@@ -168,14 +168,14 @@ input:focus, select:focus, button:focus {
   cursor: pointer;
   display: flex;
   align-items: center;
-  background-color: var(--color-a);
+  background-color: var(--color-a-l);
   padding: 8px 16px;
   border-radius: 16px;
   transition: background-color .25s ease-in-out;
 }
 
 .icono-accion-secundaria:hover {
-  background-color: rgb(34, 133, 190);
+  background-color: var(--color-a-l2);
 }
 
 .icono-accion-secundaria a {
@@ -191,15 +191,22 @@ input:focus, select:focus, button:focus {
 
 .App {
   --color-slice: #09558c;
-  --color-a-l: #2c4768;
+  --color-a-l2: rgb(44, 71, 104);
+  --color-a-l: rgb(38, 60, 88);
   --color-a: #0c2340;
-  --color-b: #69b8f7;
-  --color-c: rgb(104, 140, 232);
-  --color-d: #5350e4;
-  --color-e: #706f6f;
-  --color-f: rgb(0, 255, 255);
+  --color-b: rgb(105, 184, 247);
+  --color-c: #688ce8;
+  --color-d: #544fe3;
+  --color-e: hsl(0, 0%, 44%);
+  --color-e20: hsl(0, 0%, 80%);
+  --color-e2: #999999;
+  --color-f: #00ffff;
   --color-g: rgb(239, 248, 252);
-  --color-h: #bfed33;
-  --color-i: #fff063;
+  --color-h: #29c472;
+  --color-h20: rgb(0,130,122);
+  --color-h2: #6eceb2;
+  --color-h22: hsl(162, 49%, 80%);
+  --color-i: #ffcf75;
+  --color-l: #fff063;
   --color-j: #9dcbee;
 }

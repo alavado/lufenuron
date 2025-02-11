@@ -17,15 +17,15 @@
 }
 
 #tabla-impacto-productivo .columna-impacto-productivo:first-child > h1 {
-  background: #5F7D8B;
+  background: var(--color-e2);
 }
 
 #tabla-impacto-productivo .columna-impacto-productivo:nth-child(2) > h1 {
-  background: #EF7B10;
+  background: var(--color-h2);
 }
 
 #tabla-impacto-productivo .columna-impacto-productivo:nth-child(3) > h1 {
-  background: #2A2E57;
+  background: var(--color-a);
 }
 
 #tabla-impacto-productivo .columna-impacto-productivo h1, #tabla-impacto-productivo .columna-impacto-productivo h2 {

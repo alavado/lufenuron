@@ -26,7 +26,8 @@ const initialState = {
       factorMetodo: 1,
       presentacion: 50, // porcentaje de g por litro o kg
       esImvixa: false,
-      carencia: 10
+      carencia: 10,
+      volumen: 6400
     },
     {
       id: 2,
@@ -42,7 +43,7 @@ const initialState = {
       costoOperacional: 0,
       dosis: 350, // mg/kg
       unidadDosis: 'mg/kg',
-      duracion: 28,
+      duracion: 8,
       mortalidad: 0,
       color: '#EF7B10',
       activo: true,
@@ -127,7 +128,8 @@ const initialState = {
       factorMetodo: 1,
       presentacion: 1,
       esImvixa: false,
-      carencia: 30
+      carencia: 30,
+      volumen: 6400
     },
     {
       id: 6,
@@ -152,7 +154,8 @@ const initialState = {
       factorMetodo: 0.2,
       presentacion: 50,
       esImvixa: false,
-      carencia: 0
+      carencia: 0,
+      volumen: 6400
     },
     // {
     //   id: 5,
@@ -188,16 +191,17 @@ const initialState = {
       costoOperacional: COSTO_OPERACIONAL_BAÑO,
       unidadDosis: 'ml/m3',
       cantidadPorJaula: 20,
-      duracion: 16,
-      mortalidad: 0.12,
-      color: '#000066',
+      duracion: 6,
+      mortalidad: 0,
+      color: '#544fe3',
       activo: false,
       aplicaciones: 1,
       factorFarmaco: 6,
       factorMetodo: 1,
       presentacion: 10,
       esImvixa: false,
-      carencia: 1923
+      carencia: 1923,
+      volumen: 2000
     },
     {
       id: 8,
@@ -212,8 +216,8 @@ const initialState = {
       costoUnitarioSup: 2750,
       costoOperacional: COSTO_OPERACIONAL_BAÑO,
       unidadDosis: 'ml/m3',
-      cantidadPorJaula: 0.1,
-      duracion: 16,
+      cantidadPorJaula: 0.125,
+      duracion: 4,
       mortalidad: 0.06,
       color: '#fff063',
       activo: false,
@@ -222,7 +226,8 @@ const initialState = {
       factorMetodo: 1,
       presentacion: 10,
       esImvixa: false,
-      carencia: 0
+      carencia: 0,
+      volumen: 6400
     },
     {
       id: 9,
@@ -237,8 +242,8 @@ const initialState = {
       costoUnitarioSup: 180,
       costoOperacional: COSTO_OPERACIONAL_BAÑO,
       unidadDosis: 'ml/m3',
-      cantidadPorJaula: 5,
-      duracion: 16,
+      cantidadPorJaula: 7.5,
+      duracion: 4,
       mortalidad: 0,
       color: '#bfed33',
       activo: false,
@@ -247,7 +252,8 @@ const initialState = {
       factorMetodo: 1,
       presentacion: 10,
       esImvixa: false,
-      carencia: 0
+      carencia: 0,
+      volumen: 6400
     },
     // {
     //   id: 9,
