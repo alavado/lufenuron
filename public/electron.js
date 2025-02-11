@@ -7,7 +7,6 @@ const path = require('path');
 const isDev = require('electron-is-dev');
 const fs = require('fs')
 const csv = require('csvtojson')
-const { autoUpdater } = require("electron-updater")
 let mainWindow;
 
 function createWindow() {
@@ -46,7 +45,6 @@ function createWindow() {
 }
 
 app.on('ready', () => {
-  autoUpdater.checkForUpdates()
   createWindow()
 });
 
@@ -88,24 +86,3 @@ ipcMain.on('imprimir', (event, state) => {
     }
    
 })})
-
-autoUpdater.on('checking-for-update', () => {
-  console.log('checking-for-update');
-})
-autoUpdater.on('update-available', (info) => {
-  console.log('update-available', info);
-  mainWindow.webContents.send('descargando-actualizacion');
-})
-autoUpdater.on('update-not-available', (info) => {
-  console.log('update-not-available', info);
-})
-autoUpdater.on('error', (err) => {
-  console.log('error', err);
-})
-autoUpdater.on('download-progress', (progressObj) => {
-  console.log('download-progress', progressObj);
-})
-autoUpdater.on('update-downloaded', (info) => {
-  console.log('update-downloaded', info);
-  autoUpdater.quitAndInstall();  
-})
